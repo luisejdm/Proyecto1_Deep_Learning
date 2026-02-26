@@ -30,3 +30,12 @@ def load_data_3():
         x_test = np.load("./data/processed/x_test_128.npy")
     return x_train, x_test
 
+def load_data_full():
+    try:
+        x_train = np.load("../data/processed/x_train_full.npy")
+        x_test = np.load("../data/processed/x_test_full.npy")
+        return x_train, x_test
+    except Exception as e:
+        x_train = np.load("./data/processed/x_train_full.npy")
+        x_test = np.load("./data/processed/x_test_full.npy")
+    return x_train, x_test
